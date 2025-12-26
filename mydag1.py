@@ -8,6 +8,6 @@ with DAG('mydag1') as dag:
     S3CreateObjectOperator(
         task_id='create_s3_object',
         bucket_name='my-bucket',
-        object_key='{{ ds }}_{{ run_id }}.txt',
+        s3_key='{{ ds }}_{{ run_id }}.txt',
         data='This is the content of the file.',
     )
