@@ -11,4 +11,5 @@ with DAG('mydag1') as dag:
         s3_key='{{ ds }}_{{ run_id }}.txt',
         data='This is the content of the file.',
         replace=True,
+        aws_conn_id='aws_default',
     )
